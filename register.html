@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wpage</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet">
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .wrapper{
+            width: 750px;
+            background: rgba(255, 255, 255, .1);
+            border: 2px solid rgba(255, 255, 255, .2);
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+            
+            border-radius: 10px;
+            color: #fff;
+            padding: 40px 35px 55px;
+            margin: 0 10px;
+        }
+
+        .logo{
+           width: 60px;
+           cursor: pointer;
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0;
+            background: darkblue;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .navbar ul li:hover::after{
+            width: 100%;
+        }
+
+        .wrapper h1{
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wrapper .input-box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+
+        .input-box .input-field{
+            position: relative;
+            width: 48%;
+            height: 50px;
+            margin: 13px 0;
+        }
+
+        .input-box .input-field input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 6px;
+            padding: 15px 15px 15px 40px;
+        }
+
+        .input-box .input-field input::placeholder{
+            color: #fff;
+        }
+
+        .input-box .input-field i{
+            position: absolute;
+            left: 15px;
+            top: 50px;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .wrapper label{
+            display: inline-block;
+            font-size: 14.5px;
+            width: 10px 0 23px;
+        }
+
+        .wrapper label input{
+            accent-color: #fff;
+            margin-right: 5px;
+
+        }
+
+        .wrapper .btn{
+            width: 100%;
+            height: 45px;
+            margin-top: 15px;
+            background: darkblue;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        @media (max-width: 576px) {
+            .input-box .input-field {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="banner">
+            <div class="navbar">
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!--<li><a href="about.html">About</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    
+
+        <form action="">
+            <h1>Register</h1>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text"placeholder="Full Name" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="text"placeholder="Username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email"placeholder="Email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div class="input-field">
+                    <input type="number"placeholder="Number" required>
+                    <i class="bx bxs-phone"></i>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password"placeholder="Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password"placeholder="Confirm Password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+            </div>
+
+            <label><input type="checkbox">I declare the above iformation prpvided is true and correct</label>
+
+            <button type="submit" class="btn">Register</button>
+
+
+
+            
+
+        </form>
+    </div>
+
+</body>
+</html>
